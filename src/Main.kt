@@ -1,9 +1,14 @@
+import Connection.MySQL
+import Model.Usuario
+
 fun main(){
 
-    val menu = Menu()
+    val objeto = MySQL()
+
+    objeto.connect()
+
+    val usuario = Usuario()
 
 
-
-    menu.mostrarMenu()
 
 }

@@ -1,3 +1,5 @@
+package Model
+
 import java.sql.Time
 import java.text.SimpleDateFormat
 import java.util.*
@@ -11,23 +13,7 @@ open class Cita(
     val presupuesto: Double = 0.0
 ) {
 
-    fun registrarCliente(): String {
-        var cliente = ""
-        try {
-            while (true) {
-                println("Introduce tu nombre: ")
-                cliente = readln()
-                if (cliente.isNotBlank()) {
-                    return cliente
-                } else {
-                    println("El nombre no puede estar vacío.")
-                }
-            }
-        } catch (e: IllegalArgumentException) {
-            println("El nombre no puede estar vacío.")
-        }
-        return cliente
-    }
+
 
     fun registrarMotivo(): String {
         while (true) {
@@ -100,9 +86,6 @@ open class Cita(
 
 
     fun reservarCita(){
-        registrarCliente()
-        registrarMotivo()
-        registrarFecha()
-        registrarHora()
+
     }
 }
