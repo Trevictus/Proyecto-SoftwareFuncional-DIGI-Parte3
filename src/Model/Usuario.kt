@@ -2,6 +2,8 @@ package Model
 
 class Usuario(var nombre: String = "", var email: String = "", var telefono: Int = 0) {
 
+    constructor(email: String) : this("", email, 0)
+
     fun pedirNombre(): String {
         var nombre = ""
         try {

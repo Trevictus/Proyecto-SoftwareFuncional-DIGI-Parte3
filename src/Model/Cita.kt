@@ -2,18 +2,18 @@ package Model
 
 import java.sql.Time
 import java.text.SimpleDateFormat
-import java.util.*
+import java.sql.Date
+
 
 open class Cita(
     val cliente: String,
     val motivo: String,
-    val fecha: Date,
-    val hora: Time,
-    val empleado: String,
+    val fecha: Date?,
+    val hora: Time?,
     val presupuesto: Double = 0.0
 ) {
 
-
+    constructor() : this(cliente = "", motivo = "", fecha = null, hora = null, presupuesto = 0.0)
 
     fun registrarMotivo(): String {
         while (true) {
@@ -45,10 +45,10 @@ open class Cita(
                 println("Introduce la fecha (dd/MM/yyyy): ")
                 val input = readln()
                 try {
-                    fecha = dateFormat.parse(input)
+                    fecha = dateFormat.parse(input) as Date?
                     return fecha
                 } catch (e: Exception) {
-                    println("La fecha no es válida. Por favor, introduce una fecha en el formato correcto (dd/MM/yyyy).")
+                    println("La fecha no es válida. Por favor, introduce una fecha en el formato correcto (dd/MM/yyyy).$e")
                 }
             }
         } catch (e: IllegalArgumentException) {
@@ -85,7 +85,14 @@ open class Cita(
 
 
 
-    fun reservarCita(){
+    fun reservarCita(cliente: String): Cita{
+        val motivo = registrarMotivo()
+        val fecha = registrarFecha()
+        val hora = registrarHora()
+
+        return Cita(cliente, motivo, fecha, hora)
 
     }
+
+
 }

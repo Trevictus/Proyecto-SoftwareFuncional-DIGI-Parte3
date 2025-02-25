@@ -1,8 +1,10 @@
 package Menu
 
+import Connection.MySQL
+import Model.Cita
 import Model.Usuario
 
-class Menu {
+class Menu(val objeto: MySQL) {
     fun mostrarMenu() {
         println("Bienvenido a \"Caja y espiga\".\n1.-> Reservar cita.\n2.-> Modificar cita\n3.-> Eliminar cita.\n4.-> Salir.")
     }
@@ -14,7 +16,11 @@ class Menu {
                 println("***Elija opción***\n")
                 val opcion = readln().toInt()
                 if (opcion == 1) {
-//                    reservarCita()
+                    val usuario = pedirDatosUsuario()
+                    if (usuarioExiste(usuario, objeto)) {
+                        val cita = Cita().reservarCita(usuario.nombre)
+                        objeto.registrarCita(cita, usuario)
+                    }
                 }
                 if (opcion == 2) {
 //                    modificarCita()
@@ -34,26 +40,26 @@ class Menu {
         }
     }
 
-    fun usuarioExiste(): Boolean {
+    fun usuarioExiste(usuario: Usuario, objeto: MySQL): Boolean {
         println("¿Estás registrado? (s/n): ")
         val opcion = readln()
         if (opcion == "s") {
-            return true
+            return objeto.seleccionarIdCliente(usuario) != 0
         } else if (opcion == "n") {
             return false
         } else {
             println("Esa opción es incorrecta.")
-            usuarioExiste()
+            usuarioExiste(usuario, objeto)
         }
         return false
     }
 
-    fun usuarioNoExiste() {
-        var usuario = Usuario()
+    fun pedirDatosUsuario(): Usuario {
+        val usuario = Usuario()
         val nombre = usuario.pedirNombre()
         val email = usuario.pedirEmail()
         val telefono = usuario.pedirTelefono()
 
-        usuario = Usuario(nombre, email, telefono)
+        return Usuario(nombre, email, telefono)
     }
 }
