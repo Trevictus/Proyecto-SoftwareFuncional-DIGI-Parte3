@@ -1,7 +1,5 @@
 import Connection.MySQL
 import Menu.Menu
-import Model.Cita
-import Model.Usuario
 
 fun main() {
 

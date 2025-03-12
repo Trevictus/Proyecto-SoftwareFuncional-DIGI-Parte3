@@ -2,11 +2,8 @@ package Connection
 
 import Model.Cita
 import Model.Usuario
-import java.sql.Connection
-import java.sql.DriverManager
-import java.sql.PreparedStatement
-import java.sql.SQLException
-import java.sql.SQLIntegrityConstraintViolationException
+import java.sql.*
+import java.util.Date
 
 class MySQL {
     private val url = "jdbc:mysql://localhost:3306/carpinteria"
@@ -68,24 +65,65 @@ class MySQL {
         }
     }
 
+    fun modificarCita(email: String, nuevaFecha: Date?, nuevaHora: Time?) {
+        if (seleccionarIdCliente(Usuario(email)) != 0) {
+            val id_cliente = seleccionarIdCliente(Usuario(email))
+            val actualizacionEnTabla = "UPDATE cita SET fecha = ?, hora = ? WHERE id_cliente = ?"
+
+            val preparadorDeSentencias = connection.prepareStatement(actualizacionEnTabla)
+            preparadorDeSentencias.setDate(1, nuevaFecha as java.sql.Date?)
+            preparadorDeSentencias.setTime(2, nuevaHora)
+            preparadorDeSentencias.setInt(3, id_cliente)
+
+            preparadorDeSentencias.executeUpdate()
+            preparadorDeSentencias.close()
+
+            println("Cita actualizada correctamente.")
+        } else {
+            println("Usuario no encontrado.")
+        }
+    }
+
+    fun eliminarCita(email: String) {
+        if (seleccionarIdCliente(Usuario(email)) != 0) {
+            val id_cliente = seleccionarIdCliente(Usuario(email))
+            val eliminacionEnTabla = "DELETE FROM cita WHERE id_cliente = ?"
+
+            val preparadorDeSentencias = connection.prepareStatement(eliminacionEnTabla)
+            preparadorDeSentencias.setInt(1, id_cliente)
+
+            preparadorDeSentencias.executeUpdate()
+            preparadorDeSentencias.close()
+
+            println("Cita eliminada correctamente.")
+        } else {
+            println("Usuario no encontrado.")
+        }
+    }
+
+
     fun seleccionarIdCliente(usuario: Usuario): Int {
+        var idCliente = 0
         try {
-            val insercionEnTabla = "SELECT id from usuario WHERE email = ?"
-            preparadorDeSentencias = connection.prepareStatement(insercionEnTabla)
+            val consulta = "SELECT id FROM usuario WHERE email = ?"
+            val preparadorDeSentencias = connection.prepareStatement(consulta)
             preparadorDeSentencias.setString(1, usuario.email)
 
-            preparadorDeSentencias.executeQuery()
+            val resultado = preparadorDeSentencias.executeQuery()
+            if (resultado.next()) {
+                idCliente = resultado.getInt("id")
+            }
             preparadorDeSentencias.close()
-        } catch (e: SQLIntegrityConstraintViolationException) {
-            println("ERROR clave repetida. $e")
         } catch (e: SQLException) {
             println("ERROR INESPERADO. $e")
         }
-        return 0
+        return idCliente
     }
 
     fun disconnect() {
         connection.close()
 
     }
+
+
 }

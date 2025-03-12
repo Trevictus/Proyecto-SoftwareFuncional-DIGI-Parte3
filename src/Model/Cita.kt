@@ -45,7 +45,8 @@ open class Cita(
                 println("Introduce la fecha (dd/MM/yyyy): ")
                 val input = readln()
                 try {
-                    fecha = dateFormat.parse(input) as Date?
+                    val utilDate = dateFormat.parse(input)  // Utiliza java.util.Date
+                    fecha = Date(utilDate.time)  // Convierte java.util.Date a java.sql.Date
                     return fecha
                 } catch (e: Exception) {
                     println("La fecha no es válida. Por favor, introduce una fecha en el formato correcto (dd/MM/yyyy).$e")
@@ -93,6 +94,8 @@ open class Cita(
         return Cita(cliente, motivo, fecha, hora)
 
     }
+
+
 
 
 }

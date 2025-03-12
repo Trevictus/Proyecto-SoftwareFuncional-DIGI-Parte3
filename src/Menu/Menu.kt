@@ -15,30 +15,53 @@ class Menu(val objeto: MySQL) {
                 mostrarMenu()
                 println("***Elija opción***\n")
                 val opcion = readln().toInt()
-                if (opcion == 1) {
-                    val usuario = pedirDatosUsuario()
-                    if (usuarioExiste(usuario, objeto)) {
+
+                when (opcion) {
+                    1 -> {
+                        val usuario = pedirDatosUsuario()
+                        if (!usuarioExiste(usuario, objeto)) {
+                            println("Usuario no registrado. Procediendo al registro.")
+                            objeto.registrarUsuario(usuario)
+                        }
                         val cita = Cita().reservarCita(usuario.nombre)
                         objeto.registrarCita(cita, usuario)
                     }
-                }
-                if (opcion == 2) {
-//                    modificarCita()
-                }
-                if (opcion == 3) {
-//                    eliminarCita()
-                }
-                if (opcion == 4) {
-                    println("¡Hasta la próxima!")
-                    break
-                } else {
-                    println("Esa opción no está disponible.")
+                    2 -> {
+                        println("Introduce el correo electrónico del usuario para buscar su cita:")
+                        val email = readln()
+                        if (objeto.seleccionarIdCliente(Usuario(email)) != 0) {
+                            println("Introduce la nueva fecha (dd/MM/yyyy):")
+                            val nuevaFecha = Cita().registrarFecha()
+                            println("Introduce la nueva hora (HH:mm):")
+                            val nuevaHora = Cita().registrarHora()
+                            objeto.modificarCita(email, nuevaFecha, nuevaHora)
+                        } else {
+                            println("Usuario no encontrado.")
+                        }
+                    }
+                    3 -> {
+                        println("Introduce el correo electrónico del usuario para buscar su cita:")
+                        val email = readln()
+                        if (objeto.seleccionarIdCliente(Usuario(email)) != 0) {
+                            objeto.eliminarCita(email)
+                        } else {
+                            println("Usuario no encontrado.")
+                        }
+                    }
+                    4 -> {
+                        println("¡Hasta la próxima!")
+                        break
+                    }
+                    else -> {
+                        println("Esa opción no está disponible.")
+                    }
                 }
             }
         } catch (e: NumberFormatException) {
             println("Debe elegir una opción correcta.")
         }
     }
+
 
     fun usuarioExiste(usuario: Usuario, objeto: MySQL): Boolean {
         println("¿Estás registrado? (s/n): ")
