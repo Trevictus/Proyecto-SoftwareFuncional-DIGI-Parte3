@@ -10,7 +10,6 @@ Crear las tablas de la base de datos en la máquina mediante MySQL.
 create database carpinteria;
 
 use carpinteria;
-drop table usuario;
 create table usuario(
 id int auto_increment primary key,
 nombre varchar(50) not null,
@@ -19,7 +18,6 @@ telefono int not null
 );
 
 use carpinteria;
-drop table cita;
 create table cita(
 id_cita int auto_increment primary key,
 id_cliente int,
