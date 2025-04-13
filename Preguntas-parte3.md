@@ -1,40 +1,47 @@
-# Preguntas
+# Questions
 
-### Criterio 6a) Objetivos estratégicos:  
-- **¿Qué objetivos estratégicos específicos de la empresa aborda tu software?**  
-El software aborda los objetivos estratégicos de la carpintería "Caja y espiga" al optimizar la gestión de reservas, mejorando la eficiencia operativa y ofreciendo una experiencia más ágil y satisfactoria a los clientes.  
-- **¿Cómo se alinea el software con la estrategia general de digitalización?**  
-Se alinea al modernizar procesos clave, conectando áreas de negocio y producción con tecnologías digitales, lo que fomenta la eficiencia, escalabilidad y adaptabilidad futura de la empresa.  
-### Criterio 6b) Áreas de negocio y comunicaciones:  
-- **¿Qué áreas de la empresa (producción, negocio, comunicaciones) se ven más beneficiadas con tu software?**    
-Las áreas de producción, negocio y comunicaciones se benefician notablemente; producción al optimizar el uso de maquinaria, negocio al mejorar la experiencia del cliente, y comunicaciones al facilitar interacciones fluidas entre clientes y administradores.
-- **¿Qué impacto operativo esperas en las operaciones diarias?**  
-Se espera simplificar los procesos diarios, reducir los errores manuales y permitir una planificación más eficiente de actividades clave
-### Criterio 6c) Áreas susceptibles de digitalización:  
-- **¿Qué áreas de la empresa son más susceptibles de ser digitalizadas con tu software?**  
-Las áreas susceptibles incluyen la gestión de reservas, la interacción con clientes y el análisis de datos operativos, lo que permitirá aprovechar al máximo la tecnología para agilizar los procesos.  
-- **¿Cómo mejorará la digitalización las operaciones en esas áreas?**  
-La digitalización reducirá redundancias, mejorará la conectividad entre departamentos y facilitará la escalabilidad de las operaciones.  
-### Criterio 6d) Encaje de áreas digitalizadas (AD):  
-- **¿Cómo interactúan las áreas digitalizadas con las no digitalizadas?**  
-Las áreas digitalizadas interactúan al proporcionar información clave y herramientas que mejoran la eficiencia de procesos manuales, fomentando una integración sin interrupciones.
-- **¿Qué soluciones o mejoras propondrías para integrar estas áreas?**  
-Se recomienda la capacitación del personal y la utilización de API o herramientas de integración para asegurar una transición fluida entre áreas digitalizadas y manuales.
-### Criterio 6e) Necesidades presentes y futuras:  
-- **¿Qué necesidades actuales de la empresa resuelve tu software?**  
-El software resuelve la necesidad de automatizar las reservas, mejorar la planificación de actividades y reforzar la seguridad en el manejo y almacenamiento de datos.  
-### Criterio 6f) Relación con tecnologías:  
-- **¿Qué tecnologías habilitadoras has empleado y cómo impactan en las áreas de la empresa?**  
-Se utilizan MySQL para el almacenamiento estructurado de datos y soluciones de almacenamiento en la nube para garantizar la disponibilidad y seguridad de la información, lo que agiliza la gestión y minimiza riesgos.
-- **¿Qué beneficios específicos aporta la implantación de estas tecnologías?**  
-Proporcionan accesibilidad mejorada, redundancia de datos y eficiencia operativa, además de una base sólida para el crecimiento del negocio.
-### Criterio 6g) Brechas de seguridad:  
-- **¿Qué posibles brechas de seguridad podrían surgir al implementar tu software?**  
-Podrían surgir riesgos de acceso no autorizado a datos sensibles y pérdida de información debido a fallos en los sistemas.
-- **¿Qué medidas concretas propondrías para mitigarlas?**  
-Propuestas incluyen el uso de autenticación robusta, cifrado de datos sensibles y herramientas como SDelete para la eliminación segura de información.
-### Criterio 6h) Tratamiento de datos y análisis:  
-- **¿Cómo se gestionan los datos en tu software y qué metodologías utilizas?**  
-Los datos se recopilan mediante formularios seguros, se almacenan en MySQL, se procesan automáticamente en las reservas y se eliminan mediante métodos que garantizan la seguridad.
-- **¿Qué haces para garantizar la calidad y consistencia de los datos?**  
-Se implementan validaciones en la recopilación y almacenamiento de datos, además de pruebas constantes para asegurar calidad, consistencia y eficacia operativa.
+### Criterion 6a) Strategic Objectives:  
+- **What specific strategic objectives of the company does your software address?**  
+The software addresses the strategic objectives of the carpentry "Caja y espiga" by optimizing reservation management, improving operational efficiency, and offering a more agile and satisfying customer experience.  
+- **How does the software align with the overall digitalization strategy?**  
+It aligns by modernizing key processes, connecting business and production areas with digital technologies, which fosters efficiency, scalability, and future adaptability for the company.  
+
+### Criterion 6b) Business Areas and Communications:  
+- **Which areas of the company (production, business, communications) benefit the most from your software?**  
+The production, business, and communications areas benefit significantly; production by optimizing machine usage, business by enhancing the customer experience, and communications by facilitating smooth interactions between clients and administrators.  
+- **What operational impact do you expect on daily operations?**  
+Daily processes are expected to be simplified, manual errors reduced, and more efficient planning of key activities enabled.  
+
+### Criterion 6c) Areas Susceptible to Digitalization:  
+- **Which areas of the company are most susceptible to being digitalized with your software?**  
+The susceptible areas include reservation management, client interaction, and operational data analysis, which will allow the company to maximize technology to streamline processes.  
+- **How will digitalization improve operations in those areas?**  
+Digitalization will reduce redundancies, enhance connectivity between departments, and facilitate operational scalability.  
+
+### Criterion 6d) Fit of Digitalized Areas (DA):  
+- **How do the digitalized areas interact with non-digitalized ones?**  
+Digitalized areas interact by providing key information and tools that enhance the efficiency of manual processes, fostering seamless integration.  
+- **What solutions or improvements would you propose to integrate these areas?**  
+Staff training and the use of APIs or integration tools are recommended to ensure a smooth transition between digitalized and manual areas.  
+
+### Criterion 6e) Present and Future Needs:  
+- **What current needs of the company does your software solve?**  
+The software addresses the need to automate reservations, improve activity planning, and reinforce security in data handling and storage.  
+
+### Criterion 6f) Relationship with Technologies:  
+- **What enabling technologies have you employed, and how do they impact company areas?**  
+MySQL is used for structured data storage and cloud storage solutions to ensure information availability and security, streamlining management and minimizing risks.  
+- **What specific benefits does the implementation of these technologies provide?**  
+They provide improved accessibility, data redundancy, operational efficiency, and a solid foundation for business growth.  
+
+### Criterion 6g) Security Gaps:  
+- **What potential security gaps could arise when implementing your software?**  
+Risks such as unauthorized access to sensitive data and information loss due to system failures could arise.  
+- **What specific measures would you propose to mitigate them?**  
+Proposals include the use of strong authentication, encryption of sensitive data, and tools such as SDelete for secure information deletion.  
+
+### Criterion 6h) Data Management and Analysis:  
+- **How is data managed in your software, and what methodologies do you use?**  
+Data is collected through secure forms, stored in MySQL, automatically processed for reservations, and deleted using methods that ensure security.  
+- **What do you do to ensure data quality and consistency?**  
+Validations are implemented in data collection and storage, along with constant testing to ensure quality, consistency, and operational efficiency.
