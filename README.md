@@ -84,5 +84,7 @@ alter table cita add foreign key(id_cliente) references usuario(id) on delete ca
 2. Ejecutar el proyecto: Asegúrate de tener instalado el SDK de Kotlin. Si no está instalado, puedes hacerlo desde la configuración de IntelliJ IDEA. Haz clic en el archivo Main.kt y selecciona la opción "Ejecutar" para iniciar tu aplicación.
 
 
+## Ejemplos de uso
+![image](https://github.com/user-attachments/assets/c1471fcf-da41-447b-b6b1-cb09fc3bc1fb)
 
 
