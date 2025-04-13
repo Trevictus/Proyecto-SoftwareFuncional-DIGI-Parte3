@@ -4,11 +4,27 @@ import Connection.MySQL
 import Model.Cita
 import Model.Usuario
 
+/**
+ * Represents the menu system for managing appointments and user data 
+ * in the "Caja y espiga" application.
+ *
+ * @property objeto MySQL instance used to interact with the database.
+ */
 class Menu(val objeto: MySQL) {
+
+    /**
+     * Displays the main menu options to the user.
+     * Options include reserving, modifying, deleting appointments, and exiting.
+     */
     fun mostrarMenu() {
         println("Bienvenido a \"Caja y espiga\".\n1.-> Reservar cita.\n2.-> Modificar cita\n3.-> Eliminar cita.\n4.-> Salir.")
     }
 
+    /**
+     * Handles user input to navigate through the menu options.
+     * Based on the selected option, it performs actions such as reserving, modifying, 
+     * or deleting appointments.
+     */
     fun elegirOpcion() {
         try {
             while (true) {
@@ -62,7 +78,13 @@ class Menu(val objeto: MySQL) {
         }
     }
 
-
+    /**
+     * Checks if a user exists in the database based on their registration status.
+     *
+     * @param usuario The user whose existence is being checked.
+     * @param objeto MySQL instance used for database queries.
+     * @return True if the user exists in the database; otherwise, false.
+     */
     fun usuarioExiste(usuario: Usuario, objeto: MySQL): Boolean {
         println("¿Estás registrado? (s/n): ")
         val opcion = readln()
@@ -77,6 +99,11 @@ class Menu(val objeto: MySQL) {
         return false
     }
 
+    /**
+     * Prompts the user to input their details, including name, email, and phone number.
+     *
+     * @return A new Usuario object with the entered details.
+     */
     fun pedirDatosUsuario(): Usuario {
         val usuario = Usuario()
         val nombre = usuario.pedirNombre()
