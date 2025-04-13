@@ -12,11 +12,11 @@ En definitiva, este proyecto representa un paso significativo hacia la moderniza
 
 ## Guía de utilización:
 ### Windows:
-**Requisitos previos**
+**Requisitos previos**  
 Instalar MySQL en la máquina que operará con la aplicación.
 Instalar IntelliJIdea en la computadora.
 
-**Configuración del entorno**
+**Configuración del entorno**  
 Crear las tablas de la base de datos en la máquina mediante MySQL.
 ```sql
 create database carpinteria;
@@ -42,19 +42,19 @@ presupuesto double
 alter table cita add foreign key(id_cliente) references usuario(id) on delete cascade;
 ```
 
-**Ejecución**
+**Ejecución**  
 Ejecutar el archivo Main.kt mediante el IDE de IntelliJIdea una vez habiendo cargado el código en él.
 
 AVISO: LA INFORMACIÓN INTRODUCIDA PARA CREAR LAS TABLAS SE ALMACENARÁ EN LA BASE DE DATOS, QUEDANDO REGISTRADA EN LA MÁQUINA.  
 
 ### Linux:  
 **Requisitos previos**  
-1. Instalar MySQL mediante los comandos: **sudo apt update** y **sudo apt install mysql-server** y activar el servicion mediante **sudo systemctl start mysql** y **sudo systemctl enable mysql**.
-2. Instalar IntelliJ IDEA:- Descarga IntelliJ IDEA para Linux desde JetBrains. Una vez descargado, descomprime el archivo y sigue las instrucciones de instalación.  
+1. Instalar MySQL mediante los comandos: **sudo apt update** y **sudo apt install mysql-server** y activar el servicion mediante **sudo systemctl start mysql** y **sudo systemctl enable mysql**.  
+2. Instalar IntelliJ IDEA: Descarga IntelliJ IDEA para Linux desde JetBrains. Una vez descargado, descomprime el archivo y sigue las instrucciones de instalación.  
 
 **Configuración del entorno**  
-1. Abrir MySQL en la terminal: **mysql -u root -p**.
-2. Luego, ejecuta las mismas instrucciones SQL para configurar la base de datos:
+1. Abrir MySQL en la terminal: **mysql -u root -p**.  
+2. Luego, ejecuta las mismas instrucciones SQL para configurar la base de datos:  
 ```sql
 create database carpinteria;
 
@@ -77,10 +77,10 @@ create table cita(
 );
 
 alter table cita add foreign key(id_cliente) references usuario(id) on delete cascade;
-```
+```  
 
-**Ejecución**
-1. Configurar IntelliJ IDEA: Abre IntelliJ IDEA en Linux. Importa tu proyecto o carga el archivo Main.kt.
+**Ejecución**  
+1. Configurar IntelliJ IDEA: Abre IntelliJ IDEA en Linux. Importa tu proyecto o carga el archivo Main.kt.  
 2. Ejecutar el proyecto: Asegúrate de tener instalado el SDK de Kotlin. Si no está instalado, puedes hacerlo desde la configuración de IntelliJ IDEA. Haz clic en el archivo Main.kt y selecciona la opción "Ejecutar" para iniciar tu aplicación.
 
 
