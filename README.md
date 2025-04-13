@@ -85,8 +85,18 @@ alter table cita add foreign key(id_cliente) references usuario(id) on delete ca
 
 
 ## Ejemplos de uso
-![image](https://github.com/user-attachments/assets/c1471fcf-da41-447b-b6b1-cb09fc3bc1fb)
-![image](https://github.com/user-attachments/assets/ce580a08-f063-4b27-b5d4-313d302d3118)
+![image](https://github.com/user-attachments/assets/c1471fcf-da41-447b-b6b1-cb09fc3bc1fb)  
+El software verifica si se enconttró el driver y si es posible la conexión a la base de datos. Procedemos a marcar la opcion de reservar cita.  
+
+![image](https://github.com/user-attachments/assets/ce580a08-f063-4b27-b5d4-313d302d3118)  
+Introducimos los datos del usuario y se lanza la pregunta "¿Estás registrado? (s/n):" en caso de que sea si, verificará si es correcto y si no está el usuario registrado, se procede a su registro.  
+
+![image](https://github.com/user-attachments/assets/14206d64-40f4-49b6-8047-d165d59894f9)  
+Tras la anterior pantalla se muestra el menú con distintas opciones de servicios ofrecidos. En este caso se muestra como se escoge un dia y una hora para una reparación.  
+
+![image](https://github.com/user-attachments/assets/bc244016-babe-4943-acbc-49241589cee2)  
+Este es un ejemplo de como podemos eliminar una cita previamente guardada introduciendo los datos pedidos por la app.
+
 
 
 
