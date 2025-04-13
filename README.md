@@ -86,5 +86,7 @@ alter table cita add foreign key(id_cliente) references usuario(id) on delete ca
 
 ## Ejemplos de uso
 ![image](https://github.com/user-attachments/assets/c1471fcf-da41-447b-b6b1-cb09fc3bc1fb)
+![image](https://github.com/user-attachments/assets/ce580a08-f063-4b27-b5d4-313d302d3118)
+
 
 
