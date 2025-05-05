@@ -8,7 +8,7 @@ Bienvenido a la wiki del proyecto [nombre del proyecto]. Aquí encontrarás toda
 - Instalación - Pasos para configurar el entorno de desarrollo.
 - Guía para Desarrolladores - Cómo contribuir al proyecto y mejores prácticas.
 - Estructura del Código - Explicación de los módulos, clases y archivos clave.
-- API y Base de Datos - Especificaciones de la API y diseño de la base de datos.
+- Base de Datos - Especificaciones de la API y diseño de la base de datos.
 - Preguntas Frecuentes (FAQ) - Respuestas a dudas comunes de los desarrolladores.  
 
 ## Inicio
@@ -44,19 +44,19 @@ git commit -m "Descripción del cambio"
 
 📂 Estructura del Proyecto
 📁 src/
-   ├── 📂 Connection/       # Manejo de la conexión con la base de datos
-   │   └── 📄 MySQL.kt      # Clase para gestionar la conexión y operaciones con MySQL
-   ├── 📂 Menu/            # Gestión del menú de opciones para el usuario
-   │   └── 📄 Menu.kt      # Clase que maneja la interacción con el usuario
-   ├── 📂 Model/           # Definición de modelos utilizados en la aplicación
-   │   ├── 📄 Cita.kt      # Modelo de citas (reservas de servicios)
-   │   ├── 📄 Usuario.kt   # Modelo de usuario (clientes que interactúan con el sistema)
-   └── 📄 Main.kt          # Punto de entrada del programa
+   ├── 📂 Connection/       # Manejo de la conexión con la base de datos  
+   │   └── 📄 MySQL.kt      # Clase para gestionar la conexión y operaciones con MySQL  
+   ├── 📂 Menu/            # Gestión del menú de opciones para el usuario  
+   │   └── 📄 Menu.kt      # Clase que maneja la interacción con el usuario  
+   ├── 📂 Model/           # Definición de modelos utilizados en la aplicación  
+   │   ├── 📄 Cita.kt      # Modelo de citas (reservas de servicios)  
+   │   ├── 📄 Usuario.kt   # Modelo de usuario (clientes que interactúan con el sistema)  
+   └── 📄 Main.kt          # Punto de entrada del programa  
 
 🔗 Base de Datos
 Incluye:
 - Diseño de la base de datos.
-![Diagrama_BBDD]()
+![Diagrama_BBDD](https://github.com/Trevictus/Proyecto-SoftwareFuncional-DIGI-Parte3/blob/main/BBDD_cajayespiga.png)
 
 ❓ FAQ - Preguntas Frecuentes
 ¿Cómo reportar errores?
@@ -64,5 +64,13 @@ Puedes crear un "Issue" en GitHub aquí.
 ¿Cómo solicitar nuevas funcionalidades?
 Abre una propuesta de mejora en la sección de "Issues".
 
-📜 Licencia
-Incluye los términos de uso y contribución del proyecto.
+# 📜 Licencia y Contribución
+
+## 🔹 Licencia
+Este proyecto está protegido bajo la licencia **MIT**. Esto significa que los usuarios pueden utilizar, modificar y distribuir el código libremente, siempre que se incluya el aviso de copyright original.
+
+**MIT License:**  
+Copyright (c) 2025 Víctor G.T.  
+Se concede por la presente permiso, sin cargo, a cualquier persona que obtenga una copia de este software y los archivos de documentación asociados (el "Software"), para utilizar el Software sin restricciones, incluyendo, sin limitación, los derechos de uso, copia, modificación, fusión, publicación, distribución, sublicencia y/o venta de copias del Software, y para permitir a las personas a las que el Software se les proporcione hacerlo, sujeto a las siguientes condiciones:
+El aviso de derechos de autor anterior y este aviso de permiso se incluirán en todas las copias o partes sustanciales del Software.
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITA, INCLUYENDO PERO NO LIMITADA A GARANTÍAS DE COMERCIALIZACIÓN, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DEL COPYRIGHT SERÁN RESPONSABLES POR NINGUNA RECLAMACIÓN, DAÑO U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN DE CONTRATO, AGRAVIO O CUALQUIER OTRA FORMA, DERIVADA DE, O RELACIONADA CON EL SOFTWARE O EL USO U OTRAS OPERACIONES EN EL SOFTWARE.
