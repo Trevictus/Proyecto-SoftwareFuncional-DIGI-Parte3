@@ -1,5 +1,5 @@
 # Guía de Contribución  
-##Cómo contribuir  
+## Cómo contribuir  
 Si deseas participar en el desarrollo del proyecto, sigue estos pasos:  
 - Clona el repositorio: Descarga el código fuente del proyecto en tu entorno local.  
 - Configura el entorno: Asegúrate de cumplir con los requisitos previos y sigue las guías de configuración descritas en el documento.  
