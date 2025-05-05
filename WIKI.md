@@ -55,14 +55,14 @@ git commit -m "Descripción del cambio"
 
 🔗 Base de Datos
 Incluye:
-- Diseño de la base de datos.
+- Diseño de la base de datos.  
 ![Diagrama_BBDD](https://github.com/Trevictus/Proyecto-SoftwareFuncional-DIGI-Parte3/blob/main/BBDD_cajayespiga.png)
 
 ❓ FAQ - Preguntas Frecuentes
-¿Cómo reportar errores?
-Puedes crear un "Issue" en GitHub aquí.
-¿Cómo solicitar nuevas funcionalidades?
-Abre una propuesta de mejora en la sección de "Issues".
+¿Cómo reportar errores?  
+Puedes crear un "Issue" en GitHub aquí.  
+¿Cómo solicitar nuevas funcionalidades?  
+Abre una propuesta de mejora en la sección de "Issues".  
 
 # 📜 Licencia y Contribución
 
